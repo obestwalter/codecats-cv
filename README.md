@@ -4,6 +4,8 @@ A simple web application to maintain an online CV.
 
 ## Konzepte
 
+Am besten geschichtlich die Entwicklung aufdröseln ...
+
 ### Enfache statische Webseite
 
 ### Layout und styling mit CSS

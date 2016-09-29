@@ -1,6 +1,6 @@
 # Masterplan
 
-A simple web application to maintain on online CV.
+A simple web application to maintain an online CV.
 
 ## Tech Stack
 * backend: [Flask](http://flask.pocoo.org/)

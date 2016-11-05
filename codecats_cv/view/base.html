@@ -1,17 +1,29 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>{% block title %}{% endblock %} - My Webpage</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>{% block title %}{% endblock %} - online CV</title>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename=STATIC.CSS) }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename=STATIC.CUSTOM_CSS) }}"/>
     {% endblock %}
-  </head>
-  <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-      {% block footer %}
-      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
-      {% endblock %}
-    </div>
-  </body>
+</head>
+<body>
+
+<div id="content">{% block content %}{% endblock %}</div>
+
+<div id="footer">
+    {% block footer %}
+        &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
+    {% endblock %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename=STATIC.JS) }}"></script>
+</body>
 </html>

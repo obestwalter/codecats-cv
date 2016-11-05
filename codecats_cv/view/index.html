@@ -4,349 +4,38 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
-    <!--GRID-->
     <div class="ui grid">
+        <div class="ui four wide stackable column">
+            {% include 'contact.html' with context %}
+            {% include 'languages.html' with context %}
+            {% include 'skills.html' with context %}
+        </div>
 
-        <!--LEFT BOX-->
-        <div class="contact three wide column">
-            <!--CONTACT BOX-->
-            <div class="ui card">
-                <div class="image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">Falk Heger
-                                </div>
-                            </div>
-                        </div>
+        <div class="ui eight wide stackable column">
+            {% include 'experience.html' with context %}
+        </div>
+
+        <div class="ui four wide stackable column">
+            <div class="ui grid">
+                <div class="ui three wide stackable column">
+                    <a class="ui animated fade primary button" href="{{ url_for('add_entry') }}">
+                        <div class="visible content"><i class="add icon"></i></div>
+                        <div class="hidden content">Add</div>
+                    </a>
+                </div>
+                <div class="ui eight wide stackable remote search column">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="Search...">
+                        <i class="search icon"></i>
                     </div>
-                    <img src="{{ url_for('static', filename='img/falk.jpg') }}">
+                    <div class="results"></div>
                 </div>
-                <div class="content">
-                    <div class="header">Falk Heger</div>
-                    <div class="meta">
-                        <a class="group"
-                           href="https://www.zu.de/studium-weiterbildung/cme/index.php"
-                           target="_blank">B.A. Corporate Management &
-                            Economics</a><br>
-                        <a class="group" href="http://codecats.io/#team"
-                           target="_blank">Co-Founder CodeCats</a><br>
-                        <p class="group">IT StudentSupport</p>
-                    </div>
-                    <div class="description">This is my personal online CV,
-                        designed with HTML, CSS and JavaScript. In the backend
-                        will be running Python Flask to update it, whenever it
-                        needs to be updated!
-                    </div>
-                </div>
-                <div class="extra content">
-                    <p class="right floated created">E-Mail</p>
-                    <a class="friend"
-                       href="mailto:f.heger@zeppelin-university.net">f.heger@zeppelin-university.net</a>
-                </div>
-                <div class="extra content">
-                    <p class="right floated created">Mobile</p>
-                    <p class="friend">+49 123 4567 8910</p>
-                </div>
-                <div class="extra content">
-                    <p class="right floated created">Address</p>
-                    <p class="friend">
-                        Street 123<br>
-                        Room 123<br>
-                        12345 City<br>
-                        Germany
-                    </p>
+                <div class="ui five wide stackable column">
+                    <a class="ui primary button" href="https://github.com/obestwalter/codecats-cv" target="_blank">
+                        <i class="github icon"></i>Code
+                    </a>
                 </div>
             </div>
-
-            <!--LANGUAGES-->
-            <div class="ui card">
-                <div class="image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="header"><i class="wechat icon"></i> LANGUAGES
-                    </div>
-                    <div class="description">These are some of my skills in my
-                        huge skillset, which can be evidenced in my former work
-                        experience.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <p class="left floated created">HTML / CSS</p>
-                </div>
-            </div>
-
-            <!--SKILLS-->
-            <div class="ui card">
-                <div class="image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="header"><i class="settings icon"></i> SKILLS
-                    </div>
-                    <div class="description">These are some of my languages I
-                        speak.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <div class="ui basic demo progress">
-                        <div class="ui indicating demo progress">
-                            <div class="bar"></div>
-                            <div class="label">Funding</div>
-                        </div>
-                    </div>
-                    <p class="left floated created"><i
-                            class="germany flag"></i> German</p>
-                </div>
-                <div class="extra content">
-                    <p class="left floated created"><i class="gb flag"></i>
-                        English</p>
-                </div>
-                <div class="extra content">
-                    <p class="left floated created"><i class="china flag"></i>
-                        Chinese</p>
-                </div>
-            </div>
-        </div><!--END OF LEFT BOX-->
-
-        <!--MIDDLE BOX-->
-        <div class="ui eight wide column">
-
-            <!--WORK EXPERIENCE-->
-            <div class="ui horizontal divider">
-                <i class="travel icon"></i> WORK EXPERIENCE
-            </div>
-
-            <!--ENTRY WORK ONE-->
-            <div class="ui relaxed divided items">
-                <div class="item">
-                    <div class="ui small image">
-                        <img src="{{ url_for('static', filename='img/cc_logo.png') }}">
-                    </div>
-                    <div class="content">
-                        <p class="header">Head of Project & Co-Founder</p>
-                        <div class="meta">
-                            <p class="created"><a class="meta"
-                                                  href="http://codecats.io"
-                                                  target="_blank">CodeCats</a>
-                                | 2015 - TODAY</p>
-                        </div>
-                        <div class="description">
-                            Co-Founded the initiative in 2015 with
-                            fellow students to motivate young people
-                            to develop coding skills. Tasks vary
-                            from organizing an annual three-month
-                            coding bootcamp to hosting workshops
-                            and acquiring supporters.
-                        </div>
-                        <div class="extra">
-                            <img src="{{ url_for('static', filename='img/falk.png') }}"
-                                 class="ui circular avatar image"> Reference:
-                            <a class="created"
-                               href="mailto:f.heger@zeppelin-university.net">Falk
-                                Heger</a>
-                            <p class="created"><i class="germany flag"></i>Friedrichshafen,
-                                Germany</p>
-                        </div>
-                        <div class="ui right floated main menu">
-                            <a class="bug popup icon item"
-                               data-content="Edit this entry" href="#"><i
-                                    class="edit icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ENTRY WORK TWO-->
-            <div class="ui relaxed divided items">
-                <div class="item">
-                    <div class="ui small image">
-                        <img src="{{ url_for('static', filename='img/zu_logo.png') }}">
-                    </div>
-                    <div class="content">
-                        <p class="header">IT StudentSupport</p>
-                        <div class="meta">
-                            <p class="created"><a class="meta"
-                                                  href="https://www.zu.de"
-                                                  target="_blank">Zeppelin
-                                University</a> | 2014 - TODAY</p>
-                        </div>
-                        <div class="description">
-                            Leading the IT Student Support. Providing
-                            technical support to all students and
-                            employees, repairing laptops / computers
-                            and solving soft- and hardware problems,
-                            both in person as well as via a
-                            helpdesk.
-                        </div>
-                        <div class="extra">
-                            <p class="created"><i class="germany flag"></i>Friedrichshafen,
-                                Germany</p>
-                        </div>
-                        <div class="ui right floated main menu">
-                            <a class="bug popup icon item"
-                               data-content="Edit this entry" href="#"><i
-                                    class="edit icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ENTRY WORK THREE-->
-            <div class="ui relaxed divided items">
-                <div class="item">
-                    <div class="ui small image">
-                        <img src="{{ url_for('static', filename='img/netbeast.png') }}">
-                    </div>
-                    <div class="content">
-                        <p class="header">Business Development</p>
-                        <div class="meta">
-                            <p class="created"><a class="meta"
-                                                  href="https://netbeast.co/"
-                                                  target="_blank">Netbeast
-                                SL</a> | 2016 - 2016</p>
-                        </div>
-                        <div class="description">
-                            Internship as business developer for the
-                            European and North-American market
-                            at a near market entry startup. Key tasks
-                            included go to market strategy, preparing
-                            business cooperation and creating
-                            presentations for the acquisition.
-                            Position as Visiting Associate, including
-                            representing
-                            Netbeast at the new.New festival, after the
-                            internship.
-                        </div>
-                        <div class="extra">
-                            <p class="created"><i class="spain flag"></i>Sevilla,
-                                Spain</p>
-                        </div>
-                        <div class="ui right floated main menu">
-                            <a class="bug popup icon item"
-                               data-content="Edit this entry" href="#"><i
-                                    class="edit icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--EDUCATION-->
-            <div class="ui horizontal divider">
-                <i class="book icon"></i> EDUCATION
-            </div>
-
-            <!--ENTRY EDUCATION ONE-->
-            <div class="ui relaxed divided items">
-                <div class="item">
-                    <div class="ui small image">
-                        <img src="{{ url_for('static', filename='img/zu_logo.png') }}">
-                    </div>
-                    <div class="content">
-                        <p class="header">B.A. Corporate Management &
-                            Economics</p>
-                        <div class="meta">
-                            <p class="created"><a class="meta"
-                                                  href="https://www.zu.de/"
-                                                  target="_blank">Zeppelin
-                                University</a> | 2014 - TODAY</p>
-                        </div>
-                        <div class="description">
-                            Currently enrolled in the 6th semester of the best
-                            university there is.
-                        </div>
-                        <div class="extra">
-                            <p class="created">Current German Grade: 1,0<br>
-                                Coach: Prof Dr Stephan A. Jansen</p>
-                            <p class="created"><i class="germany flag"></i>Friedrichshafen,
-                                Germany</p>
-                        </div>
-                        <div class="ui right floated main menu">
-                            <a class="bug popup icon item"
-                               data-content="Edit this entry" href="#"><i
-                                    class="edit icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ENTRY EDUCATION TWO-->
-            <div class="ui relaxed divided items">
-                <div class="item">
-                    <div class="ui small image">
-                        <img src="{{ url_for('static', filename='img/zu.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p class="header">Humboldt Project - Investments in
-                            Cybersecurity</p>
-                        <div class="meta">
-                            <p class="created"><a class="meta"
-                                                  href="https://www.zu.de/"
-                                                  target="_blank">Zeppelin
-                                University</a> | 2016 - TODAY</p>
-                        </div>
-                        <div class="description">
-                            Currently enrolled in the 6th semester of the best
-                            university there is.
-                        </div>
-                        <div class="extra">
-                            <p class="created">Supervisor: Prof Dr Jörn von
-                                Lucke | M.A. Katharina 'Tinka' Große</p>
-                            <p class="created"><i class="germany flag"></i>Friedrichshafen,
-                                Germany</p>
-                        </div>
-                        <div class="ui right floated main menu">
-                            <a class="bug popup icon item"
-                               data-content="Edit this entry" href="#"><i
-                                    class="edit icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ENTRY EDUCATION THREE-->
-            <div class="ui relaxed divided items">
-                <div class="item">
-                    <div class="ui small image">
-                        <img src="{{ url_for('static', filename='img/zu.jpg') }}">
-                    </div>
-                    <div class="content">
-                        <p class="header">Zeppelin Project - Cities</p>
-                        <div class="meta">
-                            <p class="created"><a class="meta"
-                                                  href="https://www.zu.de/"
-                                                  target="_blank">Zeppelin
-                                University</a> | 2014 - 2015</p>
-                        </div>
-                        <div class="description">
-                            Currently enrolled in the 6th semester of the best
-                            university there is.
-                        </div>
-                        <div class="extra">
-                            <p class="created">German Grade: 1,3<br>
-                                Supervisor: Prof Dr phil Markus Rhomberg</p>
-                            <p class="created"><i class="germany flag"></i>Friedrichshafen,
-                                Germany</p>
-                        </div>
-                        <div class="ui right floated main menu">
-                            <a class="bug popup icon item"
-                               data-content="Edit this entry" href="#"><i
-                                    class="edit icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--END OF MIDDLE BOX-->
-    </div><!--END OF GRID-->
+        </div>
+    </div>
 {% endblock %}

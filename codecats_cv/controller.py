@@ -22,6 +22,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/add-entry')
+def add_entry():
+    return render_template('add-entry.html')
+
+
 def run_devserver():
     logging.basicConfig(level=logging.DEBUG)
     app.config['DEBUG'] = True

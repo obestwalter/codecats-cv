@@ -1,19 +1,28 @@
+import logging
+
 import plumbum as plumbum
+
+log = logging.getLogger(__name__)
+
+try:
+    from codecats_cv.secrets import DATA
+except ImportError:
+    DATA = ('dummy-user', 'no-password', 'no-secret-key')
+    log.warning("no secret data - using %s instead", DATA)
 
 _HERE = plumbum.LocalPath(__file__).dirname
 _PROJECT = _HERE.up()
 PKG_NAME = _HERE.basename
 
 
-class SECRETS:
-    USERNAME = 'dummy'
-    PASSWORD = 'nothing'
-    SECRET_KEY = 'set-me'
-
-    def __init__(self, username=None, password=None, secretKey=None):
+class _SECRETS:
+    def __init__(self, username, password, secretKey):
         self.USERNAME = username
         self.PASSWORD = password
         self.SECRET_KEY = secretKey
+
+
+SECRETS = _SECRETS(*DATA)
 
 
 class NAME:

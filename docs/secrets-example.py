@@ -1,4 +1,2 @@
-class DATA:
-    USERNAME = ''
-    PASSWORD = ''
-    SECRET_KEY = ''
+DATA = ('mike', 'some-password', 'some-secret-key')
+"""tuple containing username, password and secret session key"""

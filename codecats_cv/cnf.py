@@ -22,8 +22,8 @@ class PATH:
 
 
 class STATIC:
-    CSS_CUSTOM = 'codecats-cv.css'
-    JS_CUSTOM = 'codecats-cv.js'
+    CUSTOM_CSS = 'codecats-cv.css'
+    CUSTOM_JS = 'codecats-cv.js'
     CSS = 'semantic/semantic.css'
     CSS_MIN = 'semantic/semantic.min.css'
     JS = 'semantic/semantic.js'

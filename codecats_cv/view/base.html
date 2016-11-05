@@ -13,17 +13,12 @@
 </head>
 <body>
 
-<div id="content">{% block content %}{% endblock %}</div>
-
-<div id="footer">
-    {% block footer %}
-        &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
-    {% endblock %}
-</div>
+{% block content %}{% endblock %}
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename=STATIC.JS) }}"></script>
+<script src="{{ url_for('static', filename=STATIC.CUSTOM_JS) }}"></script>
 </body>
 </html>

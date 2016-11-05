@@ -1,0 +1,32 @@
+body {
+    padding-top: 25px;
+}
+
+.searchbar {
+    float: right;
+    margin-right: 25px;
+}
+
+.contact {
+    margin-left: 25px;
+}
+
+.gitbutton {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px !important;
+    margin-bottom: 25px !important;
+}
+
+.add {
+    font-size: 16px;
+}
+
+.addbutton {
+    position: fixed !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    margin-right: 225px !important;
+    margin-bottom: 25px !important;
+}

@@ -3,20 +3,21 @@
         <div class="ui dimmer">
             <div class="content">
                 <div class="center">
-                    <div class="ui inverted button">Falk Heger
+                    <div class="ui inverted button">{{ ME.NAME }}
                     </div>
                 </div>
             </div>
         </div>
-        <img src="{{ url_for('static', filename='img/falk.jpg') }}">
+        <img src="{{ url_for('static', filename='img/me.png') }}">
     </div>
     <div class="content">
-        <div class="header">Falk Heger</div>
+        <div class="header">{{ ME.NAME }}</div>
+
         <div class="meta">
+{#            TODO make this iterable (tuple name, url)#}
             <a class="group"
                href="https://www.zu.de/studium-weiterbildung/cme/index.php"
-               target="_blank">B.A. Corporate Management &
-                Economics</a><br>
+               target="_blank">{{ ME.DEGREE }}</a><br>
             <a class="group" href="http://codecats.io/#team"
                target="_blank">Co-Founder CodeCats</a><br>
             <p class="group">IT StudentSupport</p>

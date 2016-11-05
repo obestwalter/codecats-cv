@@ -5,10 +5,10 @@ import plumbum as plumbum
 log = logging.getLogger(__name__)
 
 try:
-    from codecats_cv.secrets import DATA
+    from codecats_cv import data
 except ImportError:
-    DATA = ('dummy-user', 'no-password', 'no-secret-key')
-    log.warning("no secret data - using %s instead", DATA)
+    log.warning("no custom data - using defaults")
+    from codecats_cv import data_defaults as data
 
 _HERE = plumbum.LocalPath(__file__).dirname
 _PROJECT = _HERE.up()
@@ -22,7 +22,7 @@ class _SECRETS:
         self.SECRET_KEY = secretKey
 
 
-SECRETS = _SECRETS(*DATA)
+SECRETS = _SECRETS(*data.SECRET_INIT)
 
 
 class NAME:

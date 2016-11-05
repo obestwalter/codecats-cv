@@ -3,7 +3,7 @@ import logging
 from flask import Flask
 from flask.templating import render_template
 
-from codecats_cv.cnf import PATH, STATIC, SECRETS
+from codecats_cv.cnf import PATH, STATIC, SECRETS, data
 
 log = logging.getLogger(__name__)
 
@@ -14,7 +14,7 @@ app.secret_key = SECRETS.SECRET_KEY
 
 @app.context_processor
 def inject_dict_for_all_templates():
-    return dict(STATIC=STATIC)
+    return dict(ME=data.ME, STATIC=STATIC)
 
 
 @app.route('/')

@@ -1,44 +1,47 @@
-<!--WORK EXPERIENCE-->
-<div class="ui horizontal divider">
-    <i class="travel icon"></i> WORK EXPERIENCE
-</div>
-
-<!--ENTRY WORK ONE-->
-<div class="ui relaxed divided items">
-    <div class="item">
-        <div class="ui small image">
-            <img src="{{ url_for('static', filename='img/cc_logo.png') }}">
-        </div>
-        <div class="content">
-            <p class="header">Head of Project & Co-Founder</p>
-            <div class="meta">
-                <p class="created"><a class="meta"
-                                      href="http://codecats.io"
-                                      target="_blank">CodeCats</a>
-                    | 2015 - TODAY</p>
-            </div>
-            <div class="description">
-                Co-Founded the initiative in 2015 with
-                fellow students to motivate young people
-                to develop coding skills. Tasks vary
-                from organizing an annual three-month
-                coding bootcamp to hosting workshops
-                and acquiring supporters.
-            </div>
-            <div class="extra">
-                <img src="{{ url_for('static', filename='img/falk.png') }}"
-                     class="ui circular avatar image"> Reference:
-                <a class="created"
-                   href="mailto:f.heger@zeppelin-university.net">Falk
-                    Heger</a>
-                <p class="created"><i class="germany flag"></i>Friedrichshafen,
-                    Germany</p>
-            </div>
-            <div class="ui right floated main menu">
-                <a class="bug popup icon item"
-                   data-content="Edit this entry" href="#"><i
-                        class="edit icon"></i></a>
-            </div>
-        </div>
+{% for category in categories %}
+    <div class="ui horizontal divider">
+        <i class="travel icon"></i> {{ category.title }}
     </div>
-</div>
+
+    {% for entry in category.entries %}
+        <div class="ui relaxed divided items">
+            <div class="item">
+                <div class="ui small image">
+{#                    TODO fetch also from shelve #}
+                    <img src="{{ url_for('static', filename=entry.filename) }}">
+                </div>
+                <div class="content">
+                    <p class="header">{{ entry.title }}</p>
+                    <div class="meta">
+                        <p class="created"><a class="meta"
+                                              href="http://codecats.io"
+                                              target="_blank">CodeCats</a>
+                            | 2015 - TODAY</p>
+                    </div>
+                    <div class="description">
+                        Co-Founded the initiative in 2015 with
+                        fellow students to motivate young people
+                        to develop coding skills. Tasks vary
+                        from organizing an annual three-month
+                        coding bootcamp to hosting workshops
+                        and acquiring supporters.
+                    </div>
+                    <div class="extra">
+                        <img src="{{ url_for('static', filename='img/me.png') }}"
+                             class="ui circular avatar image"> Reference:
+                        <a class="created"
+                           href="mailto:f.heger@zeppelin-university.net">Falk
+                            Heger</a>
+                        <p class="created"><i class="germany flag"></i>Friedrichshafen,
+                            Germany</p>
+                    </div>
+                    <div class="ui right floated main menu">
+                        <a class="bug popup icon item" data-content="Edit this entry" href="#">
+                            <i class="edit icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}

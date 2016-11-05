@@ -1,49 +1,34 @@
 <div class="ui card">
     <div class="image">
-        <div class="ui dimmer">
-            <div class="content">
-                <div class="center">
-                    <div class="ui inverted button">{{ ME.NAME }}
-                    </div>
-                </div>
-            </div>
-        </div>
         <img src="{{ url_for('static', filename='img/me.png') }}">
     </div>
     <div class="content">
-        <div class="header">{{ ME.NAME }}</div>
-
+        <div class="header">{{ MY.NAME }}</div>
         <div class="meta">
-{#            TODO make this iterable (tuple name, url)#}
-            <a class="group"
-               href="https://www.zu.de/studium-weiterbildung/cme/index.php"
-               target="_blank">{{ ME.DEGREE }}</a><br>
-            <a class="group" href="http://codecats.io/#team"
-               target="_blank">Co-Founder CodeCats</a><br>
-            <p class="group">IT StudentSupport</p>
+            {% for title, url in MY.TITLES %}
+                <div class="group">
+                    {% if url %}
+                        <a href="{{ url }}" target="_blank">{{ title }}</a>
+                    {% else %}
+                        {{ title }}
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
-        <div class="description">This is my personal online CV,
-            designed with HTML, CSS and JavaScript. In the backend
-            will be running Python Flask to update it, whenever it
-            needs to be updated!
-        </div>
+        <div class="description">{{ MY.DESCRIPTION }}</div>
     </div>
     <div class="extra content">
         <p class="right floated created">E-Mail</p>
-        <a class="friend"
-           href="mailto:f.heger@zeppelin-university.net">f.heger@zeppelin-university.net</a>
+        <a href="mailto:{{ MY.EMAIL }}">{{ MY.EMAIL }}</a>
     </div>
     <div class="extra content">
         <p class="right floated created">Mobile</p>
-        <p class="friend">+49 123 4567 8910</p>
+        <p class="friend">{{ MY.PHONE }}</p>
     </div>
     <div class="extra content">
         <p class="right floated created">Address</p>
-        <p class="friend">
-            Street 123<br>
-            Room 123<br>
-            12345 City<br>
-            Germany
-        </p>
+        {% for line in MY.ADDRESS %}
+            <div>{{ line }}</div>
+        {% endfor %}
     </div>
 </div>

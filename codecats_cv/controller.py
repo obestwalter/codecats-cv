@@ -14,7 +14,7 @@ app.secret_key = SECRETS.SECRET_KEY
 
 @app.context_processor
 def inject_dict_for_all_templates():
-    return dict(ME=data.ME, STATIC=STATIC)
+    return dict(MY=data.MY, STATIC=STATIC)
 
 
 @app.route('/')

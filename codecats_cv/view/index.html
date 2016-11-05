@@ -4,17 +4,6 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
-    <!--SEARCH-->
-    <div class="searchbar four wide column">
-        <div class="ui remote search">
-            <div class="ui icon input">
-                <input class="prompt" type="text" placeholder="Search...">
-                <i class="search icon"></i>
-            </div>
-            <div class="results"></div>
-        </div>
-    </div>
-
     <!--GRID-->
     <div class="ui grid">
 
@@ -360,22 +349,4 @@
             </div>
         </div><!--END OF MIDDLE BOX-->
     </div><!--END OF GRID-->
-
-
-    <!--ADD BUTTON-->
-    <div class="ui animated fade primary button addbutton">
-        <a href="create.html" style="color:white;">
-            <div class="visible content"><i class="add icon"></i></div>
-            <div class="hidden content">Add</div>
-        </a>
-    </div>
-
-    <!--SOURCE CODE BUTTON-->
-    <div class="gitbutton">
-        <div class="ui primary button">
-            <a href="https://github.com/Falk92/codecats_cv_basics"
-               target="_blank" style="color: white;"><i
-                    class="github icon"></i> View Source Code</a>
-        </div>
-    </div>
 {% endblock %}

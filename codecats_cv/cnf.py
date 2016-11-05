@@ -2,8 +2,18 @@ import plumbum as plumbum
 
 _HERE = plumbum.LocalPath(__file__).dirname
 _PROJECT = _HERE.up()
+PKG_NAME = _HERE.basename
 
-print(_HERE.basename)
+
+class SECRETS:
+    USERNAME = 'dummy'
+    PASSWORD = 'nothing'
+    SECRET_KEY = 'set-me'
+
+    def __init__(self, username=None, password=None, secretKey=None):
+        self.USERNAME = username
+        self.PASSWORD = password
+        self.SECRET_KEY = secretKey
 
 
 class NAME:

@@ -2,18 +2,43 @@
 <html>
 <head>
     {% block head %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        <title>{% block title %}{% endblock %} - online CV</title>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %} - online CV</title>
         <link rel="stylesheet" href="{{ url_for('static', filename=STATIC.CSS) }}"/>
         <link rel="stylesheet" href="{{ url_for('static', filename=STATIC.CUSTOM_CSS) }}"/>
     {% endblock %}
 </head>
 <body>
 
+<div class="searchbar four wide column">
+    <div class="ui remote search">
+        <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+    </div>
+</div>
+
 {% block content %}{% endblock %}
+
+<div class="buttons">
+    <div class="ui animated fade primary button">
+        <a href="add-entry.html" style="color:white;">
+            <div class="visible content"><i class="add icon"></i></div>
+            <div class="hidden content">Add</div>
+        </a>
+    </div>
+
+    <div class="ui primary button">
+        <a href="https://github.com/obestwalter/codecats-cv" target="_blank">
+            <i class="github icon"></i>
+            View Source Code
+        </a>
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

@@ -15,8 +15,11 @@ Am besten geschichtlich die Entwicklung aufdröseln ...
 ## Backend (running on the server)
 
 * [Flask](http://flask.pocoo.org/)
-* [TinyDB](http://tinydb.readthedocs.io) 
+
+* Storage: [Flask-Shelve](https://pythonhosted.org/Flask-Shelve/) or [TinyDB](http://tinydb.readthedocs.io) 
+* File Uploads: https://github.com/maxcountryman/flask-uploads/
 * [WTForms](https://flask-wtf.readthedocs.io)
+* [Flask-Login](https://flask-login.readthedocs.io)
 
 ### Frontend (running in the borwser)
 

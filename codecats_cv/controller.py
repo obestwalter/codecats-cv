@@ -12,6 +12,16 @@ app.config['SESSION_TYPE'] = 'filesystem'
 app.secret_key = SECRETS.SECRET_KEY
 
 
+# TODO use session and auth
+class User:
+    def __init__(self, name):
+        self.name = name
+
+    @property
+    def isLoggedIn(self):
+        return False
+
+
 @app.context_processor
 def inject_data_into_templates():
     return dict(STATIC=STATIC)
@@ -19,7 +29,7 @@ def inject_data_into_templates():
 
 @app.route('/')
 def index():
-    return render_template('main.html', MY=data.MY)
+    return render_template('main.html', MY=data.MY, user=User('dohfie'))
 
 
 @app.route('/add-entry', methods=['GET', 'POST'])

@@ -28,11 +28,14 @@
                             <i class="{{ xp.flag }} flag"></i>{{ xp.location }}
                         </p>
                     </div>
-                    <div class="ui right floated main menu">
-                        <a class="bug popup icon item" data-content="Edit this entry" href="#">
-                            <i class="edit icon"></i>
-                        </a>
-                    </div>
+                    {% if user.isLoggedIn %}
+                        <div class="ui right floated main menu">
+                            <a class="bug popup icon item"
+                               data-content="Edit this entry" href="#">
+                                <i class="edit icon"></i>
+                            </a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

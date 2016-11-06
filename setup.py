@@ -17,7 +17,6 @@ setup(
     version="0.1.0",
     author='Codecats',
     setup_requires=['setuptools_scm', 'pytest-runner'],
-    tests_require=['pytest'],
     install_requires=open("requirements.txt").readlines(),
     url='https://github.com/obestwalter/codecats-cv',
     use_scm_version=True,

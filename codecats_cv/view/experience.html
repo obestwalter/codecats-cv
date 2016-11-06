@@ -1,29 +1,31 @@
-{% for category in categories %}
+{% for category in MY.EXPERIENCE %}
     <div class="ui horizontal divider">
         <i class="{{ category.icon }} icon"></i> {{ category.title }}
     </div>
 
     <div class="ui relaxed divided items">
-        {% for entry in category.entries %}
+        {% for xp in category.experiences %}
             <div class="item">
                 <div class="ui small image">
-                    <img src="{{ url_for('static', filename=entry.filename) }}">
+                    <img src="{{ url_for('static', filename='img/%s' % xp.img) }}">
                 </div>
                 <div class="content">
-                    <p class="header">{{ entry.title }}</p>
+                    <p class="header">{{ xp.title }}</p>
                     <div class="meta">
                         <p class="created">
-                            <a class="meta" href="{{ entry.link }}" target="_blank">{{ entry.linkText }}</a>
-                            | {{ entry.duration }}
+                            <a class="meta" href="{{ xp.link }}" target="_blank">{{ xp.what }}</a>
+                            | {{ xp.duration }}
                         </p>
                     </div>
-                    <div class="description">{{ entry.description | safe }}</div>
+                    <div class="description">{{ xp.description | safe }}</div>
                     <div class="extra">
                         {# <img src="{{ url_for('static', filename='img/me.png') }}"#}
                         {#     class="ui circular avatar image"> Reference:#}
-                        <a class="created" href="mailto:{{ entry.referenceMail }}">{{ entry.referenceName }}</a>
+                        {% if xp.referenceName %}
+                            <a class="created" href="mailto:{{ xp.referenceMail }}">{{ xp.referenceName }}</a>
+                        {% endif %}
                         <p class="created">
-                            <i class="germany flag"></i>{{ entry.location }}
+                            <i class="{{ xp.flag }} flag"></i>{{ xp.location }}
                         </p>
                     </div>
                     <div class="ui right floated main menu">

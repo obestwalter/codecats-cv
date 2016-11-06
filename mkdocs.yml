@@ -1,3 +1,10 @@
+pages:
+  - Home: index.md
+  - Tech Stack:
+    - Overview: tech/stack.md
+    - Python: tech/python.md
+  - Stash: stash.md
+
 site_name: Codecats CV
 repo_url: https://github.com/obestwalter/codecats-cv
 strict: True

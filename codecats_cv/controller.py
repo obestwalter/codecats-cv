@@ -19,7 +19,7 @@ def inject_data_into_templates():
 
 @app.route('/')
 def index():
-    return render_template('index.html', MY=data.MY)
+    return render_template('main.html', MY=data.MY)
 
 
 @app.route('/add-entry', methods=['GET', 'POST'])

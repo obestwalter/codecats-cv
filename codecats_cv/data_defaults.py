@@ -39,8 +39,9 @@ class MY:
         ('something else', 'http://yahoo.com'),
         ('IT StudentSupport', None),
     )
-    DESCRIPTION = ('This is my personal online CV, designed with '
-             'Python HTML, CSS and JavaScript.')
+    DESCRIPTION = (
+        'This is my personal online CV, designed with '
+        'Python HTML, CSS and JavaScript.')
     PHONE = '+49 1234 567890'
     ADDRESS = [
         'Street 123',

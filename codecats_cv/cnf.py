@@ -1,6 +1,6 @@
 import logging
 
-import plumbum as plumbum
+import plumbum
 
 log = logging.getLogger(__name__)
 

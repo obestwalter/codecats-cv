@@ -49,3 +49,7 @@ Mainstream alternative: Bootstrap
 
 * Another widely used format to save structured data
 * e.g. used for configuring tox
+
+# JSON
+
+* Widely used data storage and transfer format

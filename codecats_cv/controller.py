@@ -4,6 +4,7 @@ from flask import Flask
 from flask.templating import render_template
 
 from codecats_cv.cnf import PATH, STATIC, SECRETS, data
+from codecats_cv.model import get_experiences
 
 log = logging.getLogger(__name__)
 
@@ -31,7 +32,9 @@ def inject_data_into_templates():
 
 @app.route('/')
 def index():
-    return render_template('main.html', MY=data.MY, user=User('dohfie'))
+    return render_template(
+        'main.html',
+        MY=data.MY, experiences=get_experiences(), user=User('dohfie'))
 
 
 @app.route('/add-entry', methods=['GET', 'POST'])

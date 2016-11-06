@@ -1,10 +1,10 @@
-{% for category in MY.EXPERIENCE %}
+{% for cat, experiences in experiences.items() %}
     <div class="ui horizontal divider">
-        <i class="{{ category.icon }} icon"></i> {{ category.title }}
+        <i class="{{ cat.icon }} icon"></i> {{ cat.title }}
     </div>
 
     <div class="ui relaxed divided items">
-        {% for xp in category.experiences %}
+        {% for xp in experiences %}
             <div class="item">
                 <div class="ui small image">
                     <img src="{{ url_for('static', filename='img/%s' % xp.img) }}">

@@ -1,39 +1,30 @@
 {% for category in categories %}
     <div class="ui horizontal divider">
-        <i class="travel icon"></i> {{ category.title }}
+        <i class="{{ category.icon }} icon"></i> {{ category.title }}
     </div>
 
-    {% for entry in category.entries %}
-        <div class="ui relaxed divided items">
+    <div class="ui relaxed divided items">
+        {% for entry in category.entries %}
             <div class="item">
                 <div class="ui small image">
-{#                    TODO fetch also from shelve #}
                     <img src="{{ url_for('static', filename=entry.filename) }}">
                 </div>
                 <div class="content">
                     <p class="header">{{ entry.title }}</p>
                     <div class="meta">
-                        <p class="created"><a class="meta"
-                                              href="http://codecats.io"
-                                              target="_blank">CodeCats</a>
-                            | 2015 - TODAY</p>
+                        <p class="created">
+                            <a class="meta" href="{{ entry.link }}" target="_blank">{{ entry.linkText }}</a>
+                            | {{ entry.duration }}
+                        </p>
                     </div>
-                    <div class="description">
-                        Co-Founded the initiative in 2015 with
-                        fellow students to motivate young people
-                        to develop coding skills. Tasks vary
-                        from organizing an annual three-month
-                        coding bootcamp to hosting workshops
-                        and acquiring supporters.
-                    </div>
+                    <div class="description">{{ entry.description | safe }}</div>
                     <div class="extra">
-                        <img src="{{ url_for('static', filename='img/me.png') }}"
-                             class="ui circular avatar image"> Reference:
-                        <a class="created"
-                           href="mailto:f.heger@zeppelin-university.net">Falk
-                            Heger</a>
-                        <p class="created"><i class="germany flag"></i>Friedrichshafen,
-                            Germany</p>
+                        {# <img src="{{ url_for('static', filename='img/me.png') }}"#}
+                        {#     class="ui circular avatar image"> Reference:#}
+                        <a class="created" href="mailto:{{ entry.referenceMail }}">{{ entry.referenceName }}</a>
+                        <p class="created">
+                            <i class="germany flag"></i>{{ entry.location }}
+                        </p>
                     </div>
                     <div class="ui right floated main menu">
                         <a class="bug popup icon item" data-content="Edit this entry" href="#">
@@ -42,6 +33,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endfor %}

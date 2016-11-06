@@ -16,8 +16,8 @@ Am besten geschichtlich die Entwicklung aufdröseln ...
 
 * [Flask](http://flask.pocoo.org/)
 
-* Storage: [Flask-Shelve](https://pythonhosted.org/Flask-Shelve/) or [TinyDB](http://tinydb.readthedocs.io) 
-* File Uploads: https://github.com/maxcountryman/flask-uploads/
+* Storage: [TinyDB](http://tinydb.readthedocs.io) 
+* File Uploads: [Flask uploads](https://github.com/maxcountryman/flask-uploads/)
 * [WTForms](https://flask-wtf.readthedocs.io)
 * [Flask-Login](https://flask-login.readthedocs.io)
 

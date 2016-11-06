@@ -13,17 +13,19 @@ app.secret_key = SECRETS.SECRET_KEY
 
 
 @app.context_processor
-def inject_dict_for_all_templates():
-    return dict(MY=data.MY, STATIC=STATIC)
+def inject_data_into_templates():
+    return dict(STATIC=STATIC)
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', MY=data.MY)
 
 
-@app.route('/add-entry')
+@app.route('/add-entry', methods=['GET', 'POST'])
 def add_entry():
+    # TODO use WTFORMS
+    # TODO check for post and add stuff from form
     return render_template('add-entry.html')
 
 

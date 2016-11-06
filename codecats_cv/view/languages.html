@@ -1,21 +1,26 @@
 <div class="ui card">
-    <div class="image">
-        <div class="ui dimmer">
-            <div class="content">
-                <div class="center">
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="content">
-        <div class="header"><i class="wechat icon"></i> LANGUAGES
-        </div>
-        <div class="description">These are some of my skills in my
-            huge skillset, which can be evidenced in my former work
-            experience.
-        </div>
+        <div class="header"><i class="wechat icon"></i> LANGUAGES</div>
+        <div class="description">These are some of the languages I speak.</div>
     </div>
+    {% for language in MY.LANGUAGES %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#{{ language.name }}')
+                .progress({
+                label   : false,
+                value   : {{ language.level }},
+                text    : {
+                    active  : '{{ language.name }}: {percent}% fluent',
+                    success : '{{ language.name }}: fluent' }
+                });
+        });
+    </script>
     <div class="extra content">
-        <p class="left floated created">HTML / CSS</p>
+        <div id="{{ language.name }}" class="ui indicating progress">
+            <div class="bar"></div>
+            <div class="label"><i class="{{ language.flag }} flag"></i> {{ language.name }} - {{ language.level }}% fluent</div>
+        </div>
     </div>
+    {% endfor %}
 </div>

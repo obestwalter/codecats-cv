@@ -1,35 +1,14 @@
 <div class="ui card">
-    <div class="image">
-        <div class="ui dimmer">
-            <div class="content">
-                <div class="center">
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="content">
-        <div class="header"><i class="settings icon"></i> SKILLS
+        <div class="header"><i class="settings icon"></i> SKILLZ</div>
+        <div class="description">These are some of my skills in my
+            huge skillset, which can be evidenced in my former work
+            experience.
         </div>
-        <div class="description">These are some of my languages I
-            speak.
-        </div>
     </div>
+    {% for skill in MY.SKILLS %}
     <div class="extra content">
-        <div class="ui basic demo progress">
-            <div class="ui indicating demo progress">
-                <div class="bar"></div>
-                <div class="label">Funding</div>
-            </div>
-        </div>
-        <p class="left floated created"><i
-                class="germany flag"></i> German</p>
+        <p class="left floated created">{{ skill }}</p>
     </div>
-    <div class="extra content">
-        <p class="left floated created"><i class="gb flag"></i>
-            English</p>
-    </div>
-    <div class="extra content">
-        <p class="left floated created"><i class="china flag"></i>
-            Chinese</p>
-    </div>
+    {% endfor %}
 </div>

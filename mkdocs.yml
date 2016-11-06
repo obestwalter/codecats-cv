@@ -16,7 +16,6 @@ extra:
     twitter: obestwalter
 extra_css:
   - _static/extra.css
-#include_404: True
 markdown_extensions:
     - admonition
     - toc:

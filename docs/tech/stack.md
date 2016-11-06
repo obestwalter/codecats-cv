@@ -40,6 +40,12 @@ Mainstream alternative: Bootstrap
 * Templating language for dynamic text generation
 * Helps you to glue together your HTML/CSS/Javascript and application code
 
-## JSON
+## Yet Another Markup Language (YAML)
 
-* Widely used format to save and transfer data
+* Widely used format to save structured data
+* e.g. used in the configuration for MkDocs and Travis
+
+# INI Format
+
+* Another widely used format to save structured data
+* e.g. used for configuring tox

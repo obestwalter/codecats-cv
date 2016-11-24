@@ -2,9 +2,11 @@ import logging
 
 from codecats_cv.model import dbExperiences
 
+
 class Experience:
-    def __init__(self, category, what, when, title, url, location, flag, description,
-                 referenceName=None, referenceMail=None, img=None):
+    def __init__(
+            self, category, what, when, title, url, location, flag,
+            description, referenceName=None, referenceMail=None, img=None):
         self.category = category
         self.what = what
         self.when = when

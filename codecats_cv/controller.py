@@ -18,6 +18,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+
 @login_manager.user_loader
 def load_user(id_):
     return User.get(id_)
@@ -30,8 +31,6 @@ def inject_data_into_templates():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    # this is a form from Flask-WTF for example purposes,
-    # you can get the data any way you want
     form = LoginForm()
     if form.validate_on_submit():
         # [load the user from the database]

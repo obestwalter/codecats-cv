@@ -1,8 +1,6 @@
 import itertools
 from setuptools import setup
 
-# TODO figure out best way to integrate tests - see http://pythonhosted.org/pytest-runner/
-
 
 def get_extra_dependencies():
     extras = {

@@ -1,0 +1,22 @@
+<div class="ui grid">
+    <div class="ui three wide stackable column">
+        <a class="ui animated fade primary button" href="{{ url_for('add_entry') }}">
+            <div class="visible content"><i class="add icon"></i></div>
+            <div class="hidden content">Add</div>
+        </a>
+    </div>
+    <div class="ui eight wide stackable remote search column">
+        <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+    </div>
+    <div class="ui five wide stackable column">
+        <a class="ui primary button"
+           href="https://github.com/obestwalter/codecats-cv"
+           target="_blank">
+            <i class="github icon"></i>Code
+        </a>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import logging
+import os
 
 from flask import Flask, render_template, url_for, redirect, request
 from flask_login import LoginManager, login_required
@@ -56,6 +57,7 @@ def add_entry():
 
 def run_devserver():
     logging.basicConfig(level=logging.DEBUG)
+    os.environ['WERKZEUG_DEBUG_PIN'] = 'off'
     app.config['DEBUG'] = True
     app.run(host='0.0.0.0', port=8080, debug=True)
 

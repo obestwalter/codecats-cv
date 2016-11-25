@@ -11,28 +11,28 @@ class Language:
 
 # TODO move into a db table
 class MY:
-    NAME = 'Claudia Vivantes'
-    EMAIL = 'my.mail@somecorp.com'
+    NAME = 'YOUR NAME'
+    EMAIL = 'your.mail@yourmail.com'
     TITLES = (
-        ('Master of the Universe', 'http://google.com'),
-        ('something else', 'http://yahoo.com'),
-        ('IT StudentSupport', None),
+        ('Your Studies', 'http://google.com'),
+        ('Job Title #1', 'http://yahoo.com'),
+        ('Job Title #2', None),
     )
     DESCRIPTION = (
         'This is my personal online CV, designed with '
         'Python HTML, CSS and JavaScript.')
-    PHONE = '+49 1234 567890'
+    PHONE = '+12 345 6789 1011'
     ADDRESS = [
         'Street 123',
-        'Room 123',
-        '12345 City',
-        'Germany',
+        'Additional',
+        'ZIP City',
+        'Country',
     ]
     SKILLS = [
-        'HTML / CSS',
-        'Javascript',
-        'Python',
-        'Advanced elementary Magick!'
+        'Skill #1',
+        'Skill #2',
+        'Skill #3',
+        'Skill #4'
     ]
     LANGUAGES = [
         Language('German', 'germany', 100),

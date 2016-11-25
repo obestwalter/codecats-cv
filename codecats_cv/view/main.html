@@ -6,18 +6,17 @@
 
 {% block content %}
     <div class="ui three column grid">
-        <div class="row">
-            <div class="ui four wide stackable column">
-                {% include 'column-1.html' with context %}
-            </div>
-            <div class="ui eight wide stackable column">
-                {% include 'column-2.html' with context %}
-            </div>
-            <div class="ui four wide stackable column">
-                {% include 'column-3.html' with context %}
-            </div>
+        <div class="ui four wide column">
+            {% include 'contact.html' with context %}
+            {% include 'languages.html' with context %}
+            {% include 'skills.html' with context %}
         </div>
-        <div class="row">
+        <div class="ui eight wide column">
+            {% include 'experience.html' with context %}
+        </div>
+        <div class="ui four wide column">
+{#                {% include 'search.html' with context %}#}
+            {% include 'buttons.html' with context %}
         </div>
     </div>
 {% endblock %}

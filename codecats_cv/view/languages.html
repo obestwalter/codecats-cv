@@ -4,26 +4,26 @@
         <div class="description">These are some of the languages I speak.</div>
     </div>
     {% for language in MY.LANGUAGES %}
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#{{ language.name }}')
-                .progress({
-                label   : false,
-                value   : {{ language.level }},
-                text    : {
-                    active  : '{{ language.name }}: {percent}% fluent',
-                    success : '{{ language.name }}: native' }
-                });
-        });
-    </script>
-    <div class="extra content">
-        <div id="{{ language.name }}" class="ui indicating progress">
-            <div class="bar"></div>
-            <div class="label">
-                <i class="{{ language.flag }} flag"></i>
-                {{ language.name }} - {{ language.level }}% fluent
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#{{ language.name }}')
+                    .progress({
+                    label   : false,
+                    value   : {{ language.level }},
+                    text    : {
+                        active  : '{{ language.name }}: {percent}% fluent',
+                        success : '{{ language.name }}: native' }
+                    });
+            });
+        </script>
+        <div class="extra content">
+            <div id="{{ language.name }}" class="ui indicating progress">
+                <div class="bar"></div>
+                <div class="label">
+                    <i class="{{ language.flag }} flag"></i>
+                    {{ language.name }} - {{ language.level }}% fluent
+                </div>
             </div>
         </div>
-    </div>
     {% endfor %}
 </div>

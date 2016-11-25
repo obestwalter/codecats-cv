@@ -2,6 +2,10 @@
 
 ** TODO ** Use Mau Mau as to introduce the other tools and libraries
 
+## Anatomy of a Python project
+
+**TODO**
+
 ## Flask (Micro Web Framework)
 
 For creating web applications.

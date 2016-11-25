@@ -2,7 +2,7 @@ pages:
   - Home: index.md
   - Tech Stack:
     - Overview: tech/stack.md
-    - Python: tech/python.md
+    - Python: tech/python-anatomy.md
   - Stash: stash.md
 
 site_name: Codecats CV

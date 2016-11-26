@@ -5,6 +5,6 @@ __pycache__/
 .tox/
 .coverage
 .coverage.*
-
+.idea
 site/
 codecats_cv/secrets.py

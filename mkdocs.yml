@@ -1,9 +1,11 @@
 pages:
   - Home: index.md
-  - Tech Stack:
-    - Overview: tech/stack.md
-    - Python: tech/python-anatomy.md
-  - Stash: stash.md
+  - Get Started: get-started.md
+  - Development workflow: workflow.md
+  - Learning Tips: learning-tips.md
+  - Tech Stack: tech-stack.md
+  - Plan: plan.md
+  # - Stash: stash.md
 
 site_name: Codecats CV
 repo_url: https://github.com/obestwalter/codecats-cv

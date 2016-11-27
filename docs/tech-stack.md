@@ -46,11 +46,11 @@ Mainstream alternative: Bootstrap
 * Widely used format to save structured data
 * e.g. used in the configuration for MkDocs and Travis
 
-# INI Format
+## INI Format
 
 * Another widely used format to save structured data
 * e.g. used for configuring tox
 
-# JSON
+## JSON
 
 * Widely used data storage and transfer format

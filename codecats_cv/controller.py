@@ -32,6 +32,7 @@ def inject_data_into_templates():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    # WARNING not implemented yet
     form = LoginForm()
     if form.validate_on_submit():
         # [load the user from the database]
@@ -52,6 +53,7 @@ def index():
 @app.route('/add-entry', methods=['GET', 'POST'])
 @login_required
 def add_entry():
+    # WARNING not implemented yet
     return render_template('add-entry.html')
 
 

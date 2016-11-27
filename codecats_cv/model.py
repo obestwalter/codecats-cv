@@ -1,8 +1,9 @@
 from collections import OrderedDict
 
+from codecats_cv.cnf import PATH
 from tinydb import TinyDB, Query
 
-db = TinyDB('db.json')
+db = TinyDB(PATH.DB)
 dbExperiences = db.table('experiences')
 
 

@@ -33,7 +33,8 @@ class NAME:
 
 class PATH:
     PROJECT = _PROJECT
-    SITE = _PROJECT / 'codecats_cv'
+    SITE = _PROJECT / PKG_NAME
+    DB = _PROJECT / PKG_NAME / 'db.json'
     SEMANTIC = SITE / 'semantic'
     STATIC = SITE / NAME.STATIC
     ROOT_FILES = STATIC / '_root'

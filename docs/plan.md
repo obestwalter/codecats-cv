@@ -38,4 +38,17 @@ Your own **free** online CV on [\<your-name\>.pythonanywhere.com](http://obestwa
 
 # Learning by playing
 
-http://www.pythonchallenge.com/
+* https://www.codewars.com
+* https://codingame.com
+* https://www.codewars.com/trainer/setup
+* OLD_SKOOL!1!! http://www.pythonchallenge.com/
+
+# Learning by exploring
+
+* http://pythontutor.com
+* PyCharm debugger
+* Pythons incredible powers introspection
+
+#  Other learning tools
+
+* http://thonny.cs.ut.ee/

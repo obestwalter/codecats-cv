@@ -6,11 +6,12 @@ If you want to learn about developing web applications in 2016 the main problem 
 
 ## HyperText Markup Language (HTML) 
 
+* Describes a document with markup and links
 * The only thing really necessary to make a web site
 
 ## Cascading Style Sheets (CSS) 
 
-* makes web sites look better
+* Makes web sites look better by styling the elements
 * Nowadays often used with an extra layer of abstraction to overcome shortcomings (e.g. Less and Sass)
 
 ## Javascript 

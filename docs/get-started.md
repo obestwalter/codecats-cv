@@ -11,11 +11,11 @@ There is still a learning curve though and you will be required to do a few thin
 
 Python Anywhere also has really [good documentation](https://help.pythonanywhere.com/pages/). What follows is the step-by-step guide how to get this specific app online. 
 
-**NOTE:** In paths you have to replace the parts in angled brackets  (**<your username\>**) with your pythonanywhere username.
+**NOTE:** In paths you have to replace the parts in angled brackets  (**`<your username>`**) with your pythonanywhere username.
 
 ## Create an account on pythonanywhere 
 
-Keep in mind that the username will be a part of the url - e.g. if your username is "batman83" your app will be reachable at `https://batman83.pythonanywhere.com`. If you switch to a paid plan you can connect any domain you own to your web app.
+Keep in mind that the username will be a part of the url - e.g. if your username is **batman83** your app will be reachable at `https://batman83.pythonanywhere.com`. If you switch to a paid plan you can connect any domain you own to your web app.
 
 ## Create the Web app
 
@@ -40,7 +40,7 @@ Copy the output of pwd which is the absolute path to the virtualenv (`/home/<you
  
 Click on the "Dashboard" link and got to the "Web" Tab. 
 
-Go to the **Virtualenv:** section, click on **Source Code**, copy the path from your clipoard into the field and klick the checkmark next to the field to save the change.
+Go to the **Virtualenv:** section and set the path from your clipoard - make sure to klick the checkmark next to the path to save the change.
 
 If the path is correct a link will turn up directly below the virtualenv path: "Start a console in this virtualenv" - click on the link to got to a bash console with the active virtualenv.
 
@@ -72,7 +72,7 @@ if path not in sys.path:
    sys.path.insert(0, path)
 from codecats_cv.controller import app as application
 ```
-**Do not forget to replace **<your username\>** with your actual username.
+**Do not forget to replace **`<your username>`** with your actual username.
 
 ## Set path for static files
 

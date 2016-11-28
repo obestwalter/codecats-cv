@@ -13,7 +13,8 @@
 
 Software development is it's own universe with different cultures, idioms, terminolgy, etc. - learning to program works best, if you immerse yourself into that universe and learn not just a programming langauge but the language of programming. If you know what to search for then Google can help you to learn everything you need.
 
-Good sources of knowledge:
+# Good sources of knowledge
 
-* [Stack Overflow (Q&A)](http://stackoverflow.com/)
+* [Python docs](https://www.python.org/doc/)
+* [Stack Overflow (Q&A)](http://stackoverflow.com/questions/tagged/python)
 * [Github](http://github.com) (Lots of source code and documentation)

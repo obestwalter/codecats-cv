@@ -1,0 +1,214 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to Codecats CV\n\u00b6\n\n\nThe aim of this course is to give you a glimpse into the world of web development as it is practiced today. The main challenge for a newcomer is that there is a vast array of technologies and languages to get a grasp on before you are able to understand how it all works.\n\n\nIn this course we are trying to give you a basic understanding about one possible technology stack by building a complete application that makes use of all the technologies and brings them together.\n\n\nAs we will cover the complete process from idea to implementation and deployment the actual application is pretty simple but is actually already usable as an online CV. Use this as a starting point to learn more about Python and web development while customizing the CV to your own needs.",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-codecats-cv",
+            "text": "The aim of this course is to give you a glimpse into the world of web development as it is practiced today. The main challenge for a newcomer is that there is a vast array of technologies and languages to get a grasp on before you are able to understand how it all works.  In this course we are trying to give you a basic understanding about one possible technology stack by building a complete application that makes use of all the technologies and brings them together.  As we will cover the complete process from idea to implementation and deployment the actual application is pretty simple but is actually already usable as an online CV. Use this as a starting point to learn more about Python and web development while customizing the CV to your own needs.",
+            "title": "Welcome to Codecats CV"
+        },
+        {
+            "location": "/get-started/",
+            "text": "Get started\n\u00b6\n\n\nGet your code online\n\u00b6\n\n\nWe will deploy the app on \npythonanywhere\n because it is very friendly to people who have not much experience in administration and hosting. \n\n\n\n\nCost free plan is already powerful enough to host a simple web app that does not have too much traffic\n\n\nAlready includes a URL (\nhttps://<your pythonanywhere username>.pythonanywhere.com\n) to have a site online in minutes\n\n\n\n\nThere is still a learning curve though and you will be required to do a few things in the shell (through a web interface in the browser), but I'll guide you through it.\n\n\nPython Anywhere also has really \ngood documentation\n. What follows is the step-by-step guide how to get this specific app online. \n\n\nNOTE:\n In paths you have to replace the parts in angled brackets  (\n<your username>\n) with your pythonanywhere username.\n\n\nCreate an account on pythonanywhere\n\u00b6\n\n\nKeep in mind that the username will be a part of the url - e.g. if your username is \nbatman83\n your app will be reachable at \nhttps://batman83.pythonanywhere.com\n. If you switch to a paid plan you can connect any domain you own to your web app.\n\n\nCreate the Web app\n\u00b6\n\n\n\n\nLog into \npythonanywhere\n with your account credentials.\n\n\nIn the web app tab create a web app choosing the Manual configuration method. \n\n\nChoose Python3.5 as interpreter\n\n\n\n\nNow you have an app that needs to be further configured.\n\n\nCreate a virtualenv for the app\n\u00b6\n\n\nGo to the \"Consoles\" tab and Open a \nBash\n Console from your dashboard.\n\n\nIn Bash console:\n\n\n$ cd ~\n$ mkvirtualenv codecats-cv --python=/usr/bin/python3.5\n$ cd .virtualenvs/codecats-cv\n$ pwd\n\n\n\nCopy the output of pwd which is the absolute path to the virtualenv (\n/home/<your username>/.virtualenvs/codecats-cv\n) into your clipboard.\n\n\nClick on the \"Dashboard\" link and got to the \"Web\" Tab. \n\n\nGo to the \nVirtualenv:\n section and set the path from your clipoard - make sure to klick the checkmark next to the path to save the change.\n\n\nIf the path is correct a link will turn up directly below the virtualenv path: \"Start a console in this virtualenv\" - click on the link to got to a bash console with the active virtualenv.\n\n\nFetch code from Github\n\u00b6\n\n\nIn Bash console:\n\n\n$ cd ~  # change into your home directory\n$ git clone https://github.com/<your username>/codecats-cv.git\n$ cd codecats-cv\n$ pip install -e .  # installs the app\n$ pwd\n\n\n\nCopy the output of pwd which is the absolute path to the code of your web app (\n/home/<your username>/codecats-cv\n) into your clipboard.\n\n\nClick on the \"Dashboard\" link and got to the \"Web\" Tab.\n\n\nGo to the \nCode:\n section, click on \nSource Code\n, copy the path from your clipoard into the field and klick the checkmark next to the field to save the change.\n\n\nCongfigure WSGI app\n\u00b6\n\n\nGo to the \nCode:\n section, click on the path in \nWSGI configuration\n you can edit that file directly in the web browser then. Delete all the contents and replace them with this:\n\n\nimport sys\n\npath = '/home/<your username>/codecats-cv'\nif path not in sys.path:\n   sys.path.insert(0, path)\nfrom codecats_cv.controller import app as application\n\n\n\n\nDo not forget to replace \n<your username>\n** with your actual username.\n\n\nSet path for static files\n\u00b6\n\n\nNot necessary but makes your app load faster.\n\n\nGo to Dashboard > Web and add \n/static/\n as URL and the absolute path to the static path in your checkout.\n\n\nSet a password\n\u00b6\n\n\nIf you want your CV to be only accessible to specific people you can also set a password in Dashboard > Web (Web app needs to be reloaded to activate protection).\n\n\nThis makes only sense though if you also keep the private data out of your Repository.\n\n\nTroubleshooting\n\u00b6\n\n\nIf you run into trouble there is some more help here: \nI've got an existing web app that I'm trying to deploy\n.",
+            "title": "Get Started"
+        },
+        {
+            "location": "/get-started/#get-started",
+            "text": "",
+            "title": "Get started"
+        },
+        {
+            "location": "/get-started/#get-your-code-online",
+            "text": "We will deploy the app on  pythonanywhere  because it is very friendly to people who have not much experience in administration and hosting.    Cost free plan is already powerful enough to host a simple web app that does not have too much traffic  Already includes a URL ( https://<your pythonanywhere username>.pythonanywhere.com ) to have a site online in minutes   There is still a learning curve though and you will be required to do a few things in the shell (through a web interface in the browser), but I'll guide you through it.  Python Anywhere also has really  good documentation . What follows is the step-by-step guide how to get this specific app online.   NOTE:  In paths you have to replace the parts in angled brackets  ( <your username> ) with your pythonanywhere username.",
+            "title": "Get your code online"
+        },
+        {
+            "location": "/get-started/#create-an-account-on-pythonanywhere",
+            "text": "Keep in mind that the username will be a part of the url - e.g. if your username is  batman83  your app will be reachable at  https://batman83.pythonanywhere.com . If you switch to a paid plan you can connect any domain you own to your web app.",
+            "title": "Create an account on pythonanywhere"
+        },
+        {
+            "location": "/get-started/#create-the-web-app",
+            "text": "Log into  pythonanywhere  with your account credentials.  In the web app tab create a web app choosing the Manual configuration method.   Choose Python3.5 as interpreter   Now you have an app that needs to be further configured.",
+            "title": "Create the Web app"
+        },
+        {
+            "location": "/get-started/#create-a-virtualenv-for-the-app",
+            "text": "Go to the \"Consoles\" tab and Open a  Bash  Console from your dashboard.  In Bash console:  $ cd ~\n$ mkvirtualenv codecats-cv --python=/usr/bin/python3.5\n$ cd .virtualenvs/codecats-cv\n$ pwd  Copy the output of pwd which is the absolute path to the virtualenv ( /home/<your username>/.virtualenvs/codecats-cv ) into your clipboard.  Click on the \"Dashboard\" link and got to the \"Web\" Tab.   Go to the  Virtualenv:  section and set the path from your clipoard - make sure to klick the checkmark next to the path to save the change.  If the path is correct a link will turn up directly below the virtualenv path: \"Start a console in this virtualenv\" - click on the link to got to a bash console with the active virtualenv.",
+            "title": "Create a virtualenv for the app"
+        },
+        {
+            "location": "/get-started/#fetch-code-from-github",
+            "text": "In Bash console:  $ cd ~  # change into your home directory\n$ git clone https://github.com/<your username>/codecats-cv.git\n$ cd codecats-cv\n$ pip install -e .  # installs the app\n$ pwd  Copy the output of pwd which is the absolute path to the code of your web app ( /home/<your username>/codecats-cv ) into your clipboard.  Click on the \"Dashboard\" link and got to the \"Web\" Tab.  Go to the  Code:  section, click on  Source Code , copy the path from your clipoard into the field and klick the checkmark next to the field to save the change.",
+            "title": "Fetch code from Github"
+        },
+        {
+            "location": "/get-started/#congfigure-wsgi-app",
+            "text": "Go to the  Code:  section, click on the path in  WSGI configuration  you can edit that file directly in the web browser then. Delete all the contents and replace them with this:  import sys\n\npath = '/home/<your username>/codecats-cv'\nif path not in sys.path:\n   sys.path.insert(0, path)\nfrom codecats_cv.controller import app as application  Do not forget to replace  <your username> ** with your actual username.",
+            "title": "Congfigure WSGI app"
+        },
+        {
+            "location": "/get-started/#set-path-for-static-files",
+            "text": "Not necessary but makes your app load faster.  Go to Dashboard > Web and add  /static/  as URL and the absolute path to the static path in your checkout.",
+            "title": "Set path for static files"
+        },
+        {
+            "location": "/get-started/#set-a-password",
+            "text": "If you want your CV to be only accessible to specific people you can also set a password in Dashboard > Web (Web app needs to be reloaded to activate protection).  This makes only sense though if you also keep the private data out of your Repository.",
+            "title": "Set a password"
+        },
+        {
+            "location": "/get-started/#troubleshooting",
+            "text": "If you run into trouble there is some more help here:  I've got an existing web app that I'm trying to deploy .",
+            "title": "Troubleshooting"
+        },
+        {
+            "location": "/workflow/",
+            "text": "Development workflow\n\u00b6\n\n\nDevelopment\n\u00b6\n\n\n\n\nfork this repo into your own Github account\n\n\nclone your repo on your devbox\n\n\ncreate a Python3.5 virtualenv and activate it\n\n\ninstall app in virtualenv (\npip install -e <path/to/repo/clone>\n)\n\n\nset virtualenv as Project Interpreter in PyCharm\n\n\nrun \ncontroller.py\n (starts a local devserver)\n\n\nmake changes\n\n\ncheck in Browser if it works\n\n\ncommit and push changes to Github\n\n\n\n\nDeployment\n\u00b6\n\n\nGo to pythonanywhere and open a Bash console.\n\n\nIn Bash console:\n\n\n$ cd ~/codecats-cv\n$ git pull\n\n\n\nGo to Dashboard > Web and reload the app.",
+            "title": "Development workflow"
+        },
+        {
+            "location": "/workflow/#development-workflow",
+            "text": "",
+            "title": "Development workflow"
+        },
+        {
+            "location": "/workflow/#development",
+            "text": "fork this repo into your own Github account  clone your repo on your devbox  create a Python3.5 virtualenv and activate it  install app in virtualenv ( pip install -e <path/to/repo/clone> )  set virtualenv as Project Interpreter in PyCharm  run  controller.py  (starts a local devserver)  make changes  check in Browser if it works  commit and push changes to Github",
+            "title": "Development"
+        },
+        {
+            "location": "/workflow/#deployment",
+            "text": "Go to pythonanywhere and open a Bash console.  In Bash console:  $ cd ~/codecats-cv\n$ git pull  Go to Dashboard > Web and reload the app.",
+            "title": "Deployment"
+        },
+        {
+            "location": "/learning-tips/",
+            "text": "Learning to learn\n\u00b6\n\n\nThe most important thing ...\n\u00b6\n\n\n... you need to learn, when learning to program, is how to learn to use new technologies. Learning a new technology includes a whole range of things:\n\n\n\n\nWhat is the best (for my needs) implementation of that technology?\n\n\nWhere is the best documentation?\n\n\nHow do I start using it (installation, invokation, etc.)?\n\n\nWhat are the best tools to help me using the technology (developing, testing, debugging)?\n\n\n\n\nGeneral Tips\n\u00b6\n\n\nSoftware development is it's own universe with different cultures, idioms, terminolgy, etc. - learning to program works best, if you immerse yourself into that universe and learn not just a programming langauge but the language of programming. If you know what to search for then Google can help you to learn everything you need.\n\n\nGood sources of knowledge\n\u00b6\n\n\n\n\nPython docs\n\n\nStack Overflow (Q&A)\n\n\nGithub\n (Lots of source code and documentation)",
+            "title": "Learning Tips"
+        },
+        {
+            "location": "/learning-tips/#learning-to-learn",
+            "text": "",
+            "title": "Learning to learn"
+        },
+        {
+            "location": "/learning-tips/#the-most-important-thing",
+            "text": "... you need to learn, when learning to program, is how to learn to use new technologies. Learning a new technology includes a whole range of things:   What is the best (for my needs) implementation of that technology?  Where is the best documentation?  How do I start using it (installation, invokation, etc.)?  What are the best tools to help me using the technology (developing, testing, debugging)?",
+            "title": "The most important thing ..."
+        },
+        {
+            "location": "/learning-tips/#general-tips",
+            "text": "Software development is it's own universe with different cultures, idioms, terminolgy, etc. - learning to program works best, if you immerse yourself into that universe and learn not just a programming langauge but the language of programming. If you know what to search for then Google can help you to learn everything you need.",
+            "title": "General Tips"
+        },
+        {
+            "location": "/learning-tips/#good-sources-of-knowledge",
+            "text": "Python docs  Stack Overflow (Q&A)  Github  (Lots of source code and documentation)",
+            "title": "Good sources of knowledge"
+        },
+        {
+            "location": "/tech-stack/",
+            "text": "The Tech Stack\n\u00b6\n\n\nIf you want to learn about developing web applications in 2016 the main problem is that you have an wide array of languages, technologies, frameworks, tools and hosters to choose from, which is simply overwhelming.\n\n\nTODO\n add good introductory resource for all used technologies\n\n\nHyperText Markup Language (HTML)\n\u00b6\n\n\n\n\nDescribes a document with markup and links\n\n\nThe only thing really necessary to make a web site\n\n\n\n\nCascading Style Sheets (CSS)\n\u00b6\n\n\n\n\nMakes web sites look better by styling the elements\n\n\nNowadays often used with an extra layer of abstraction to overcome shortcomings (e.g. Less and Sass)\n\n\n\n\nJavascript\n\u00b6\n\n\n\n\nThe only programming language running natively on all mainstream browsers\n\n\nTherefore very likely the most used programming language on the planet at the moment\n\n\nAlso used on server side nowadays (e.g. NodeJS)\n\n\n\n\nSemantic UI\n\u00b6\n\n\n\n\nProvides you the means to create a modern website without having to start from scratch\n\n\nSolves a lot of problems for you (e.g. dealing with browser incompatibilities)\n\n\nIs basically a collection of CSS and Javascript to be used on your site\n\n\n\n\nMainstream alternative: Bootstrap\n\n\nPython\n\u00b6\n\n\n\n\nVery high level general purpose programming language\n\n\nGood language for beginners\n\n\nSecond best language for everything\n\n\nVery mature (around since the early 1990s)\n\n\nhuge library support\n\n\n\n\nJinja2\n\u00b6\n\n\n\n\nTemplating language for dynamic text generation\n\n\nHelps you to glue together your HTML/CSS/Javascript and application code\n\n\n\n\nYet Another Markup Language (YAML)\n\u00b6\n\n\n\n\nWidely used format to save structured data\n\n\ne.g. used in the configuration for MkDocs and Travis\n\n\n\n\nINI Format\n\u00b6\n\n\n\n\nAnother widely used format to save structured data\n\n\ne.g. used for configuring tox\n\n\n\n\nJSON\n\u00b6\n\n\n\n\nWidely used data storage and transfer format",
+            "title": "Tech Stack"
+        },
+        {
+            "location": "/tech-stack/#the-tech-stack",
+            "text": "If you want to learn about developing web applications in 2016 the main problem is that you have an wide array of languages, technologies, frameworks, tools and hosters to choose from, which is simply overwhelming.  TODO  add good introductory resource for all used technologies",
+            "title": "The Tech Stack"
+        },
+        {
+            "location": "/tech-stack/#hypertext-markup-language-html",
+            "text": "Describes a document with markup and links  The only thing really necessary to make a web site",
+            "title": "HyperText Markup Language (HTML)"
+        },
+        {
+            "location": "/tech-stack/#cascading-style-sheets-css",
+            "text": "Makes web sites look better by styling the elements  Nowadays often used with an extra layer of abstraction to overcome shortcomings (e.g. Less and Sass)",
+            "title": "Cascading Style Sheets (CSS)"
+        },
+        {
+            "location": "/tech-stack/#javascript",
+            "text": "The only programming language running natively on all mainstream browsers  Therefore very likely the most used programming language on the planet at the moment  Also used on server side nowadays (e.g. NodeJS)",
+            "title": "Javascript"
+        },
+        {
+            "location": "/tech-stack/#semantic-ui",
+            "text": "Provides you the means to create a modern website without having to start from scratch  Solves a lot of problems for you (e.g. dealing with browser incompatibilities)  Is basically a collection of CSS and Javascript to be used on your site   Mainstream alternative: Bootstrap",
+            "title": "Semantic UI"
+        },
+        {
+            "location": "/tech-stack/#python",
+            "text": "Very high level general purpose programming language  Good language for beginners  Second best language for everything  Very mature (around since the early 1990s)  huge library support",
+            "title": "Python"
+        },
+        {
+            "location": "/tech-stack/#jinja2",
+            "text": "Templating language for dynamic text generation  Helps you to glue together your HTML/CSS/Javascript and application code",
+            "title": "Jinja2"
+        },
+        {
+            "location": "/tech-stack/#yet-another-markup-language-yaml",
+            "text": "Widely used format to save structured data  e.g. used in the configuration for MkDocs and Travis",
+            "title": "Yet Another Markup Language (YAML)"
+        },
+        {
+            "location": "/tech-stack/#ini-format",
+            "text": "Another widely used format to save structured data  e.g. used for configuring tox",
+            "title": "INI Format"
+        },
+        {
+            "location": "/tech-stack/#json",
+            "text": "Widely used data storage and transfer format",
+            "title": "JSON"
+        },
+        {
+            "location": "/plan/",
+            "text": "The lofty aim\n\u00b6\n\n\nYour own \nfree\n online CV on \n\\<your-name>.pythonanywhere.com\n (or if you're willing to pay the good people at pythonanywhere.com: \non a domain of your choice\n)\n\n\nIntroduction: the Hacker universe\n\u00b6\n\n\n\n\nhacker\n\nA person who delights in having an intimate understanding of the internal workings of a system, computers and computer networks in particular.\n\n\n\n\n-- \nRFC 1932\n\n\n\n\nWhat they had in common was mainly love of excellence and programming. They wanted to make their programs that they used be as good as they could. They also wanted to make them do neat things. They wanted to be able to do something in a more exciting way than anyone believed possible and show \"Look how wonderful this is. I bet you didn't believe this could be done.\"\n\n\n\n\n-- Richard Stallman\n\n\n\n\nHackers are curious and explore the possibilities and limits of technology (and often - as a side effect - tend to expand them)\n\n\nHackers have their own \nculture, language and idols\n\n\nHackers like the \ncommand line\n\n\nHacker\n != \nCracker\n\n\n\n\nIntroduction: the ecosystem\n\u00b6\n\n\n\n\nCode storage and collaboration: \nGithub\n (close second (offering free private repositories): \nBitbucket\n)\n\n\nOrganization: \nKanban Board\n on \nTrello\n or if connected to code: \nGithub Projects\n\n\nMain development tool: \nPyCharm\n\n\nHosting: \nPython Anywhere\n\n\n\n\nOnline resources\n\u00b6\n\n\n\n\nOfficial Python Docs\n\n\nGlossary of Python terminology\n\n\n\n\nBonus: some funny tools\n\u00b6\n\n\n\n\nhowdoi\n (instant coding help on the command line)\n\n\nStack Overflow Importer\n\n\nthef#$*%\n\n\n\n\nLearning by playing\n\u00b6\n\n\n\n\nhttps://www.codewars.com\n\n\nhttps://codingame.com\n\n\nhttps://www.codewars.com/trainer/setup\n\n\nOLD_SKOOL!1!! http://www.pythonchallenge.com/\n\n\n\n\nLearning by exploring\n\u00b6\n\n\n\n\nhttp://pythontutor.com\n\n\nPyCharm debugger\n\n\nPythons incredible powers introspection\n\n\n\n\nOther learning tools\n\u00b6\n\n\n\n\nhttp://thonny.cs.ut.ee/",
+            "title": "Plan"
+        },
+        {
+            "location": "/plan/#the-lofty-aim",
+            "text": "Your own  free  online CV on  \\<your-name>.pythonanywhere.com  (or if you're willing to pay the good people at pythonanywhere.com:  on a domain of your choice )",
+            "title": "The lofty aim"
+        },
+        {
+            "location": "/plan/#introduction-the-hacker-universe",
+            "text": "hacker \nA person who delights in having an intimate understanding of the internal workings of a system, computers and computer networks in particular.   --  RFC 1932   What they had in common was mainly love of excellence and programming. They wanted to make their programs that they used be as good as they could. They also wanted to make them do neat things. They wanted to be able to do something in a more exciting way than anyone believed possible and show \"Look how wonderful this is. I bet you didn't believe this could be done.\"   -- Richard Stallman   Hackers are curious and explore the possibilities and limits of technology (and often - as a side effect - tend to expand them)  Hackers have their own  culture, language and idols  Hackers like the  command line  Hacker  !=  Cracker",
+            "title": "Introduction: the Hacker universe"
+        },
+        {
+            "location": "/plan/#introduction-the-ecosystem",
+            "text": "Code storage and collaboration:  Github  (close second (offering free private repositories):  Bitbucket )  Organization:  Kanban Board  on  Trello  or if connected to code:  Github Projects  Main development tool:  PyCharm  Hosting:  Python Anywhere",
+            "title": "Introduction: the ecosystem"
+        },
+        {
+            "location": "/plan/#online-resources",
+            "text": "Official Python Docs  Glossary of Python terminology",
+            "title": "Online resources"
+        },
+        {
+            "location": "/plan/#bonus-some-funny-tools",
+            "text": "howdoi  (instant coding help on the command line)  Stack Overflow Importer  thef#$*%",
+            "title": "Bonus: some funny tools"
+        },
+        {
+            "location": "/plan/#learning-by-playing",
+            "text": "https://www.codewars.com  https://codingame.com  https://www.codewars.com/trainer/setup  OLD_SKOOL!1!! http://www.pythonchallenge.com/",
+            "title": "Learning by playing"
+        },
+        {
+            "location": "/plan/#learning-by-exploring",
+            "text": "http://pythontutor.com  PyCharm debugger  Pythons incredible powers introspection",
+            "title": "Learning by exploring"
+        },
+        {
+            "location": "/plan/#other-learning-tools",
+            "text": "http://thonny.cs.ut.ee/",
+            "title": "Other learning tools"
+        }
+    ]
+}

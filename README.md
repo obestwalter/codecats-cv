@@ -2,7 +2,7 @@
 
 A simple web application to maintain an online CV for the student initiative [CodeCats](http://codecats.io/).
 
-**[Online example](http://obestwalter.pythonanywhere.com)**
+![Screenshot](codecats_cv/static/img/screenshot.png)
 
 **[Documentation](http://oliver.bestwalter.de/codecats-cv/)**
 

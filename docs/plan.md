@@ -1,6 +1,6 @@
 # The lofty aim
 
-Your own **free** online CV on [\<your-name\>.pythonanywhere.com](http://obestwalter.pythonanywhere.com/) (or if you're willing to pay the good people at pythonanywhere.com: [on a domain of your choice](https://help.pythonanywhere.com/pages/OwnDomains/))
+Your own **free** online CV on [\<your-name\>.pythonanywhere.com](https://pythonanywhere.com/) (or if you're willing to pay the good people at pythonanywhere.com: [on a domain of your choice](https://help.pythonanywhere.com/pages/OwnDomains/))
 
 # Introduction: the Hacker universe
 

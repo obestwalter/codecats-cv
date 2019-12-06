@@ -1,4 +1,4 @@
-flask==0.11.1
+flask==1.0
 flask-login==0.4.0
 flask-uploads==0.2.1
 flask-wtf==0.13.1

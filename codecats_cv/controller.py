@@ -11,13 +11,13 @@ from codecats_cv.model import get_experiences
 log = logging.getLogger(__name__)
 
 app = Flask(__name__, template_folder=PATH.VIEW, static_folder=PATH.STATIC)
-app.config['SESSION_TYPE'] = 'filesystem'
+app.config["SESSION_TYPE"] = "filesystem"
 app.secret_key = SECRETS.SECRET_KEY
 app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'login'
+login_manager.login_view = "login"
 
 
 @login_manager.user_loader
@@ -44,28 +44,24 @@ def login():
     return render_template("login.html", form=form)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template(
-        'main.html', MY=data.MY, experiences=get_experiences())
+    return render_template("main.html", MY=data.MY, experiences=get_experiences())
 
 
-@app.route('/add-entry', methods=['GET', 'POST'])
+@app.route("/add-entry", methods=["GET", "POST"])
 @login_required
 def add_entry():
     # WARNING not implemented yet
-    return render_template('add-entry.html')
+    return render_template("add-entry.html")
 
 
 def run_devserver():
     logging.basicConfig(level=logging.DEBUG)
-    os.environ['WERKZEUG_DEBUG_PIN'] = 'off'
-    app.config.update(
-        TEMPLATES_AUTO_RELOAD=True,
-        DEBUG=True
-    )
+    os.environ["WERKZEUG_DEBUG_PIN"] = "off"
+    app.config.update(TEMPLATES_AUTO_RELOAD=True, DEBUG=True)
     app.run(port=8080)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run_devserver()

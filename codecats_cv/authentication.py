@@ -17,7 +17,7 @@ class User(UserMixin):
 
 
 class LoginForm(FlaskForm):
-    password = StringField('password', validators=[DataRequired()])
+    password = StringField("password", validators=[DataRequired()])
 
     def validate(self):
-        return self.password.data == 'rumpelstielzchen'
+        return self.password.data == "rumpelstielzchen"

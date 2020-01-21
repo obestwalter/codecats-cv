@@ -4,7 +4,7 @@ from codecats_cv.cnf import PATH
 from tinydb import TinyDB, Query
 
 db = TinyDB(PATH.DB)
-dbExperiences = db.table('experiences')
+dbExperiences = db.table("experiences")
 
 
 class ExperienceCategory:
@@ -13,14 +13,13 @@ class ExperienceCategory:
         self.icon = icon
 
     def __repr__(self):
-        return ("<%s(%s, %s)>" %
-                (self.__class__.__name__, self.title, self.icon))
+        return "<%s(%s, %s)>" % (self.__class__.__name__, self.title, self.icon)
 
 
 # TODO move this into a db table
 NAME_CAT_MAP = [
-    ('work', ExperienceCategory('WORK EXPERIENCE', 'travel')),
-    ('education', ExperienceCategory('EDUCATION', 'book')),
+    ("work", ExperienceCategory("WORK EXPERIENCE", "travel")),
+    ("education", ExperienceCategory("EDUCATION", "book")),
 ]
 
 
@@ -32,5 +31,5 @@ def get_experiences():
     return experiences
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(get_experiences())
